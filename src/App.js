@@ -6,6 +6,12 @@ import Informacion from './components/layouts/Informacion';
 import Navbar1 from './components/NavBar1';
 import Inicio from './components/layouts/Inicio';
 
+import ItemCount from './components/ItemCount';
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// import {} from '@fortawesome/free-solid-svg-icons';
+
+
+
 function App() {
   return (
     <div className="App">
@@ -20,10 +26,24 @@ function App() {
                 <Route path='*' element={<Navigate replace to="/"/>} />
               </Route>
         </Routes>
+        
         </BrowserRouter>
-     
+
  
       </header>
+      <div className="row">
+        <div className="col-4">
+          
+        </div>
+        <div className="col-4">
+       
+        </div>
+        <div className="col-4">
+
+        <ItemCount inicial={1} stock={5}  />
+        </div>
+      </div>
+     
     </div>
   );
 }
